@@ -13,36 +13,36 @@ const TestimonialCard = ({ name, score, text, rating, avatar, improvement, cours
         ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
     >
       {/* Hover Effect */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+  <div className="absolute inset-0 bg-gradient-to-br from-blue-100 to-purple-100 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
       
-  <div className="relative bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-500 group-hover:-translate-y-2 h-full">
+    <div className="relative bg-gradient-to-br from-blue-50 to-purple-50 backdrop-blur-sm rounded-2xl p-6 border border-blue-200 shadow-lg hover:shadow-2xl transition-all duration-500 group-hover:-translate-y-2 h-full">
         {/* Quote Icon */}
         <div className="absolute top-4 right-4 opacity-10">
-          <Quote className="w-12 h-12 text-blue-600" />
+          <Quote className="w-12 h-12 text-blue-500" />
         </div>
 
         {/* Rating Stars */}
         <div className="flex items-center mb-4">
           {[...Array(rating)].map((_, i) => (
-            <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+            <Star key={i} className="w-5 h-5 text-blue-500 fill-current" />
           ))}
-          <span className="ml-2 text-sm text-gray-500 font-medium">{rating}.0</span>
+          <span className="ml-2 text-sm text-blue-700 font-medium">{rating}.0</span>
         </div>
 
         {/* Testimonial Text */}
-  <p className="text-gray-700 mb-6 leading-relaxed relative z-10">"{text}"</p>
+    <p className="text-blue-900 mb-6 leading-relaxed relative z-10">"{text}"</p>
 
         {/* Student Info */}
-  <div className="flex items-start space-x-4">
+    <div className="flex items-start space-x-4">
           {/* Avatar */}
           <div className="relative">
-            <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-white font-bold text-lg">
-              {avatar}
-            </div>
+              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-white font-bold text-lg">
+                {avatar}
+              </div>
             {/* Improvement Badge */}
             {improvement && (
-              <div className="absolute -top-2 -right-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full flex items-center">
-                <TrendingUp className="w-3 h-3 mr-1" />
+              <div className="absolute -top-2 -right-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white text-xs px-2 py-1 rounded-full flex items-center">
+                <TrendingUp className="w-3 h-3 mr-1 text-white" />
                 {improvement}
               </div>
             )}
@@ -55,24 +55,24 @@ const TestimonialCard = ({ name, score, text, rating, avatar, improvement, cours
                 {score}
               </span>
             </div>
-            <div className="flex items-center text-sm text-gray-600 mb-2">
-              <MapPin className="w-3 h-3 mr-1" />
+            <div className="flex items-center text-sm text-blue-700 mb-2">
+              <MapPin className="w-3 h-3 mr-1 text-blue-500" />
               {country} • {course}
             </div>
             {/* Course Type */}
-            <div className="inline-block bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-md font-medium">
+            <div className="inline-block bg-gradient-to-r from-blue-200 to-purple-200 text-blue-700 text-xs px-2 py-1 rounded-md font-medium">
               {course}
             </div>
           </div>
         </div>
 
         {/* Decorative Border Bottom */}
-  <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-b-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+    <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-b-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
       </div>
 
       {/* Sequential Number (Desktop only) */}
       <div className="absolute -top-3 -left-3 hidden lg:block">
-        <div className="w-8 h-8 rounded-full bg-gradient-to-br from-gray-700 to-gray-900 flex items-center justify-center text-white font-bold text-sm shadow-lg">
+        <div className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white font-bold text-sm shadow-lg">
           {index + 1}
         </div>
       </div>
